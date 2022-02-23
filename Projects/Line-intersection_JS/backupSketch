@@ -1,0 +1,50 @@
+let width = 600, height = 400;
+
+function setup() {
+    createCanvas(width, height);
+    us = createVector(0, 0);
+    ud = createVector(width, 0);
+    ds = createVector(0, height);
+    dd = createVector(width, height);
+}
+
+var ps = [];
+var ls = [];
+var inter = [];
+var us, ud, ds, dd, walled = 0, waiting = false;
+
+function draw() {
+
+    background(0);
+
+    for (var i = 0; i < ps.length; i++) {
+        noStroke();
+        fill(255);
+        ellipse(ps[i].x, ps[i].y, 5);
+    }
+    for (var j = 0; j < ls.length; j++) {
+        let l = ls[j];
+        stroke(255);
+        strokeWeight(2);
+        if (l.m != Infinity) {
+            line(0, l.q, width, l.q + l.m * width);
+        } else {
+            line(l.q, 0, l.q, height);
+        }
+    }
+    for (let i = 0; i < inter.length; i++) {
+        noStroke();
+        fill(255, 0, 0);
+        ellipse(inter[i].x, inter[i].y, 6);
+    }
+
+    if (waiting) {
+        noStroke();
+        fill(255 / 2);
+        ellipse(waiting.x, waiting.y, 5);
+        ellipse(mouseX, mouseY, 5);
+        strokeWeight(1);
+        stroke(255 / 2);
+        drawLineFromP(waiting, createVector(mouseX, mouseY));
+    }
+}

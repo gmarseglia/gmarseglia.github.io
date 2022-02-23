@@ -1,0 +1,204 @@
+h1,
+p,
+button {
+  font-family: Monaco, Monospace, sans-serif;
+}
+
+p,
+button {
+  text-transform: capitalize;
+}
+
+h1,
+p {
+  cursor: default;
+}
+
+button {
+  border: 0;
+  background: black;
+  color: white;
+  border-radius: 6px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-size: medium;
+}
+
+button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+button:hover:not([disabled]) {
+  background: white;
+  color: black;
+  font-size: large;
+}
+
+.centered {
+  text-align: center;
+}
+
+.small {
+  font-size: small;
+}
+
+.strip {
+  height: 100%;
+  float: left;
+  box-sizing: border-box;
+  transition-duration: 0.25s;
+}
+
+#layer_fg,
+#layer_bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  min-width: 450px;
+}
+
+#layer_fg {
+  z-index: 1;
+}
+
+#layer_bg {
+  z-index: 0;
+}
+
+#div_title_and_btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#div_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#div_title h1 {
+  margin: 0 1px 0 1px;
+  width: 100%;
+  font-size: xxx-large;
+  padding-bottom: 30px;
+}
+
+#txt_title_start {
+  text-align: right;
+  text-transform: uppercase;
+}
+
+#txt_title_end {
+  color: white;
+}
+
+#txt_colorname {
+  text-align: center;
+}
+
+#div_btns {
+  display: flex;
+  align-items: start;
+}
+
+#div_btns button {
+  margin: 0 4px 0 4px;
+  white-space: nowrap;
+}
+
+#div_interval {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0.3;
+  transition: 0.4s;
+  font-size: small;
+}
+
+#div_interval p {
+  white-space: nowrap;
+}
+
+#div_interval:hover {
+  opacity: 1;
+  font-size: medium;
+}
+
+#input_interval {
+  margin-left: 10px;
+  background: black;
+  color: white;
+  border-radius: 6px;
+  border: 0;
+  transition-duration: 0.4s;
+}
+
+#input_interval:hover {
+  background: white;
+  color: black;
+}
+
+#div_nameholder {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: small;
+  transition-duration: 0.4s;
+}
+
+#div_nameholder:hover {
+  z-index: 2;
+  font-size: large;
+  animation: blink 1.5s infinite;
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% {
+    color: black;
+  }
+
+  50% {
+    color: white;
+    bottom: 10px;
+  }
+
+  100% {
+    color: black;
+  }
+}
+
+#div_nameholder p {
+  text-transform: lowercase;
+}
+
+#div_hide {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+#div_hide button {
+  background: transparent;
+  color: black;
+  font-size: small;
+  opacity: 0.3;
+}
+
+#div_hide button:hover {
+  font-size: medium;
+  cursor: pointer;
+  color: white;
+  opacity: 1;
+}

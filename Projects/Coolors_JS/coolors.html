@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <script type="text/javascript" src="main.js"></script>
+
+  <body onload="setup();">
+
+    <div id="layer_bg"></div>
+
+    <div id="layer_fg">
+    
+      <div id="div_title_and_btn">
+
+        <div id='div_title'>
+           <h1 id="txt_title_start">Cool</h1>
+           <h1 id="txt_title_end">ors!</h1>
+           <h1 id="txt_colorname" hidden></h1>
+        </div>
+       
+        <div id='div_btns'>
+          <button id="btn_change" onclick="onBtnClick(this);">Change coolor</button>
+          <button id="btn_animate" onclick="onBtnClick(this);">Start animation</button>
+          <button id="btn_showall" onclick="onBtnClick(this);" disabled>Show all</button>
+        </div>
+        
+      </div>
+
+      <div id="div_interval">
+        <p id='txt_interval'>Animation Interval</p>
+        <input id="input_interval" class="centered" type="number" 
+        min="50" max="4000" value="250" onchange="intervalChanged();">
+      </div>
+        
+      <div id="div_nameholder">
+        <p>by gmarseglia</p>
+      </div>
+        
+      <div id="div_hide">
+        <button id='btn_hide' onclick='onBtnClick(this);'>Hide</button>
+      </div>
+
+    </div>
+
+  </body>
+
+</html>
