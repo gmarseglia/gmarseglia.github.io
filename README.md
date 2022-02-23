@@ -1,2 +1,2 @@
-# Github page URL:
-	gmarseglia.github.io
+# Github page
+	URL:	<gmarseglia.github.io>
